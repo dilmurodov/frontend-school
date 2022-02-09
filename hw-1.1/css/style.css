@@ -35,6 +35,12 @@ button{
     outline: none;
 }
 
+:root {
+    --red-color: #FF5555;
+    --red-hover: #fd8686;
+    --white-color: #fff;
+}
+
 .section {
     border: 1px solid #D9D9D9;
     width: 40rem;
@@ -55,14 +61,14 @@ button{
     outline: none;
     width: 100%;
     padding: 1.7rem;
-    background: #FFFFFF;
+    background: var(--white-color);
     border: 1px solid #D9D9D9;
     border-radius: 6px;
     font-size: 1.4rem;
 }
 
 .search-part__input:hover {
-    border: 1px solid #FF5555;
+    border: 1px solid var(--red-color);
 }
 
 .search-part__input:disabled {
@@ -72,20 +78,19 @@ button{
 .search-part__button {
     padding: 1.7rem;
     border-radius: 6px;
-    color: #fff;
+    color: var(--white-color);
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
-    background-color: #FF5555;
+    background-color: var(--red-color);
 }
 
 .search-part__button:hover {
-    background-color: #fd8686;
+    background-color: var(--red-hover);
 }
 
 .search-part__button:disabled {
     background: #D9D9D9;
-    ;
 }
 
 .git-repo-list {
@@ -109,10 +114,10 @@ button{
 }
 
 .git-repo-tile__logo {
-    background: #FF5555;
+    background: var(--red-color);
     border-radius: 50%;
     font-size: 4.5em;
-    color: #fff;
+    color: var(--white-color);
     font-weight: 700;
     border-radius: 50%;
     height: 80px;
