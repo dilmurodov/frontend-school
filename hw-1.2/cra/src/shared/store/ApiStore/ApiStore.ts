@@ -43,7 +43,7 @@ export default class ApiStore implements IApiStore {
         // fetch(endpoint, req); or simple
         // with spread operator
         try {
-            const response = await fetch(...this.getRequestData(params));  // fetch(url, [options])
+            const response = await fetch(endpoint, req);  // fetch(url, [options])
 
             if (response.ok) {
                 return {
@@ -61,7 +61,7 @@ export default class ApiStore implements IApiStore {
         catch (e) { // если иы не смогли распарсить
             return {
                 success: false,
-                data: e, 
+                data: null, 
                 status: StatusHTTP.UNEXPECTED_ERROR
             }
         }
