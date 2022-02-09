@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+html {
+    font-size: 10px;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%
 }
 
 * {
@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+button{
+    border: none;
+    outline: none;
+}
+
 .section {
     border: 1px solid #D9D9D9;
     width: 40rem;
@@ -46,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.2em;
 }
 
-.search-part input {
+.search-part__input {
     outline: none;
     width: 100%;
     padding: 1.7rem;
@@ -55,39 +60,42 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 6px;
     font-size: 1.4rem;
 }
-.search-part input:hover{
+
+.search-part__input:hover {
     border: 1px solid #FF5555;
 }
-.search-part input:disabled{
+
+.search-part__input:disabled {
     background: #F9F9F9;
 }
-.search-part button{
+
+.search-part__button {
     padding: 1.7rem;
     border-radius: 6px;
     color: #fff;
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
-    border: none;
-    outline: none;
     background-color: #FF5555;
 }
-.search-part button:hover{
+
+.search-part__button:hover {
     background-color: #fd8686;
 }
 
-.search-part button:disabled{
-    background: #D9D9D9;;
+.search-part__button:disabled {
+    background: #D9D9D9;
+    ;
 }
 
-.card-list {
+.git-repo-list {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1.6em;
 }
 
-.card {
+.git-repo-tile {
     cursor: pointer;
     display: flex;
     padding: 1.2em;
@@ -95,10 +103,12 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     border-radius: 6px;
 }
-.card:hover{
+
+.git-repo-tile:hover {
     box-shadow: 0px 2px 6px rgba(182, 182, 182, 0.25);
 }
-.card .round {
+
+.git-repo-tile__logo {
     background: #FF5555;
     border-radius: 50%;
     font-size: 4.5em;
@@ -114,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 1.2rem;
 }
 
-.card .text h4 {
+.git-repo-tile__title {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -122,13 +132,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 19px;
     color: #000000;
 }
-.card .text {
+
+.git-repo-tile__content {
     display: flex;
     flex-direction: column;
     align-self: center;
     gap: 0.4em;
 }
-.card .text>span {
+
+.git-repo-tile__content {
     font-style: normal;
     font-weight: normal;
     line-height: 16px;
@@ -136,19 +148,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4rem;
 }
 
-.text div:last-child {
+.git-repo-tile__content{
     font-size: 1.4rem;
     color: #7E7E7E;
 }
 
-.text .rate i {
+.git-repo-tile__rate i {
     color: #FF9432;
 }
 
-.text .rate {
+.git-repo-tile__rate {
     margin-right: 1.5rem;
 }
 
-.text .kts:hover{
+.git-repo-tile__company:hover {
     color: #208FBF;
 }
